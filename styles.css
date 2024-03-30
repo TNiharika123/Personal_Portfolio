@@ -1,11 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
+.skill-section {
+  text-align: center;
+}
+
+.section-title h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.section-content {
+  margin-top: 30px;
+}
+
+.text-info h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.progress-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rating-bar {
+  margin-bottom: 30px;
+  width: 40%; /* Adjust width as needed */
+  text-align: left;
+  margin-right: 35px;
+}
+
+.rating-bar label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.skill-progress {
+  margin-bottom: 15px;
+}
+
+.progress {
+  height: 17px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 12px;
+  
+}
+
+.bar-left .progress-bar {
+  background-color: #5295af;
+}
+
+.bar-right .progress-bar {
+  background-color: #5295af;
+  
+}
+
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
   scroll-behavior:smooth;
   color: white;
+  
 }
 a{
   text-decoration: none ;
@@ -22,19 +87,39 @@ body{
   font-family: 'Lexend', sans-serif;
   font-size:16px;
   line-height:24px; 
-  background-color:#202020;
+  background-image: url(back1.avif);
+  
+  /* background:#1e1e1e; */
 }
 .container{
   width: 1170px;
   margin:auto;
 }
 
-nav a:hover{
-  color:pink;
+
+.navbar {
+  background-color: rgb(4, 121, 130);
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
-nav a{
-  padding: 50px;
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px; /* Adjust spacing between links */
+  font-size: 16px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
+
+.navbar a:hover {
+  color: rgba(255, 255, 255, 0.7); /* Lighten text color on hover */
+}
+
 
 
       /*---------------------------Header---------------------------*/
@@ -133,8 +218,8 @@ nav a{
   height:  400px;
   border-radius: 11%;
   overflow: hidden;
-  border: 15px solid #444444;
-  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
+  border: 11px solid #badbe7;
+  box-shadow: 25px 17px 25px rgba(0, 0, 0, 0.9)
 }
 profile-photo .img{
   height: 100%;
@@ -315,7 +400,7 @@ profile-photo .img{
   background-color: #e5e5e5;
 }
 .education-content .row .timeline-title  {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   margin-bottom: 12px;
 }
@@ -333,12 +418,23 @@ profile-photo .img{
 
 
 /*---------------------------Projects---------------------------*/
+.project-link {
+  text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    width: calc(33.33% - 20px); /* Adjust width to fit 3 items in one line with some spacing */
+    margin: 10px; /* Add margin for spacing between items */
+}
+.project:hover{
+  background-color: #3f808a;
+  transition: 0.1s;
+}
+
 .project-content{
   padding: 90px 0;
   /* color:#fff;  */
 }
 .project-title{
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .project-title h4{
@@ -352,12 +448,12 @@ profile-photo .img{
   color: #e5e5e5;
 }
 .projects{
-  display: flex;
-  justify-content:space-between;
-  flex-wrap: wrap;
+  display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute items evenly with space around them */
+    flex-wrap: wrap;
 }
 .project{
-    /* padding: 30px 15px; */
+   height: 350px;
     color: #e5e5e5;
     border: 2px solid #e5e5e5;
     border-radius: 10px;
